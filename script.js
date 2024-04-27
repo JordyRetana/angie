@@ -24,7 +24,7 @@ function showTodo(filter) {
                 liTag += `<li class="task">
                             <label for="${id}">
                                 <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${completed}>
-                                <p class="${completed}">${todo.name}</p>
+                                <p class="${compe}">${todo.name}</p>
                             </label>
                             <div class="settings">
                                 <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
