@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
+    <!-- Asegúrate de que la versión de FontAwesome que incluyes sea compatible con los íconos usados -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <title>List angie</title>
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="header">
+                <img src="images/NI.png" alt="Icon" class="header-icon">
+                <h1 class="header-title">Hola Niña</h1>
+                <form class="sidebar-form" data-new-category-form>
+                    <div class="form-control">
+                        <input type="text" placeholder="Enter Category" data-new-category-input>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add Category
+                    </button>
+                </form>
+            </header>
+            <ul class="sidebar-list" data-categories>
+                <!-- Corregí las etiquetas li para que estén bien formadas -->
+                <li>
+                    <input type="color" class="sidebar-color">
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <!-- Header -->
+            <header class="header">
+                <div>
+                    <h1 class="header-title">Bienvenida Niña, </h1>
+                    <div class="currently-viewing" data-currently-viewing>Estas Viendo</div>
+                </div>
+
+                <!-- Create Todo Form -->
+                <form class="create-todo-form" data-new-todo-form>
+                    <div class="form-control">
+                        <select data-new-todo-select required>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-new-todo-input placeholder="Ingrese Tarea" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="date" data-new-todo-date placeholder="Select Date" required>
+                    </div>
+                    <!-- Añadido contenido al botón para clarificar su función -->
+                    <button class="btn btn-primary">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add Todo
+                    </button>
+                </form>
+
+                <!-- Update Todo Form -->
+                <form class="edit-todo-form" data-edit-todo-form>
+                    <div class="form-control">
+                        <select data-edit-todo-select>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-edit-todo-input placeholder="Enter Todo" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="date" data-edit-todo-date placeholder="Select Date" required>
+                    </div>
+                    <button class="btn btn-primary">Save</button>
+                </form>
+
+            </header>
+
+            <!-- Cards -->
+            <section class="todos-container" data-cards>
+                <div class="todo" style="border-color: black;">
+                    <div class="todo-actions">
+                        <i class="far fa-edit"></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* Base */
+:root {
+    --primary-color: #000000;
+    --light-color: #ffffff;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+    --linea: #add8e6;
+    --do:rgb(103, 202, 235)6;
+
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgba(224, 236, 248, 0.46);
+    color: var(--do);
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+    padding: 32px;
+    height: 100vh;
+}
+
+/* App container grid */
+.app {
+    display: grid;
+    
+    grid-template-columns: 225px 1fr;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Utilities */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    display: inline-block;
+    padding: 12.50px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Header */
+.header {
+    color: var(--primary-color);
+    padding: 1.6rem;
+    position: sticky;
+    top: 0;
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.currently-viewing {
+    font-size: 1.5rem;
+}
+
+.currently-viewing > span {
+    font-weight: bold;
+    color: #e57373;
+    cursor: pointer;
+}
+
+/* Sidebar Form */
+.sidebar-form .form-control {
+    margin: 10px 0;
+}
+
+.sidebar-form input {
+    border: 0;
+    width: 100%;
+    padding: 3px 0;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.sidebar-form input:focus {
+    outline: none;
+}
+
+.sidebar-form button {
+    width: 100%;
+}
+
+/* Sidebar List */
+.sidebar-list {
+    padding: 1.6rem;
+
+}
+
+.sidebar-item {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin: 16px 0;
+    cursor: pointer;
+    font-size: 1.50rem; /* Aquí ajustas el tamaño de la fuente */
+}
+
+.sidebar-item.active {
+    font-weight: bold;
+}
+
+.sidebar-item:first-child {
+    margin-top: 0;
+}
+
+.sidebar-color {
+    border: none;
+    width: 25px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+/* Main */
+.main {
+    background-image: url('images/fond.png'); /* Añade el nombre de tu archivo aquí */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    overflow-y: scroll;
+    border-top-left-radius: 30px;  /* Redondea la esquina superior izquierda */
+    border-top-right-radius: 30px; /* Redondea la esquina superior derecha */
+    border-bottom-left-radius: 20px;  /* Redondea la esquina inferior izquierda */
+    border-bottom-right-radius: 20px;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.main .header {
+    background: var(--linea);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 0px;  /* Redondea la esquina superior izquierda */
+    border-top-right-radius: 10px; /* Redondea la esquina superior derecha */
+}
+
+
+/* Create and Edit Form */
+.create-todo-form input, .edit-todo-form input,
+.create-todo-form select, .edit-todo-form select {
+    border: 0;
+    width: 100%;
+    padding: 3px 0;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.create-todo-form input:focus, .edit-todo-form input:focus,
+.create-todo-form select:focus, .edit-todo-form select:focus {
+    outline: none;
+}
+
+.create-todo-form, .edit-todo-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: .8;
+}
+
+.create-todo-form input, .edit-todo-form input {
+    border-bottom: 1px solid #b4b3cb;
+    width: 350px;
+}
+
+.edit-todo-form {
+    display: none;
+}
+
+/* Cards */
+.todos-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+    grid-auto-rows: max-content;
+    gap: 20px;
+    padding: 1.6rem;
+}
+
+.todo {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border-top: 6px solid;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.todo-tag {
+    font-size: 1.6rem;
+    padding: .5rem 2.5rem;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.todo-description {
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem 0;
+    word-break: break-all;
+}
+
+.todo-actions {
+    margin-top: auto;
+}
+
+.todo-actions i {
+    font-size: 1.6rem;
+    margin-right: 1.6rem;
+    opacity: 0.25;
+    cursor: pointer;
+}
+.todo-date {
+    font-size: 1.2rem;
+    color: #000000;
+    background-color: #f8f9fa;
+    padding: -20px -10px;
+    margin-top: -500px; /* Aumentar este valor para bajar la fecha un poco más */
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    margin: 0 0 0 0; /* Asegúrate de que los otros márgenes sean 0 para no afectar el posicionamiento */
+    padding-right: 10px;
+}
+
+.todo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 10px; /* Espacio entre íconos */
+}
+
+.todo-date {
+    flex-grow: 1; /* Ocupar el espacio disponible hasta los íconos */
+    margin: 0; /* Remover márgenes innecesarios */
+    padding-right: 10px; /* Espacio antes de los íconos */
+}
+
+
