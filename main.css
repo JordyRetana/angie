@@ -32,9 +32,12 @@
 
 html {
     font-size: 62.5%;
+    zoom:80%
+
 }
 
 body {
+    
     background-color: #eaeef7;
     color: var(--letra); /* Uso de la variable --letra */
     font-family: "Lato", sans-serif;
@@ -51,7 +54,7 @@ body {
     grid-template-columns: 225px 1fr;
     border-radius: 16px;
     overflow: hidden;
-    height: 100%;
+    height: auto;
 }
 
 /* Utilities */
@@ -174,6 +177,8 @@ body {
 /* Main */
 .main {
     background-color: var(--pri);
+    height: 1100px;
+
     overflow-y: scroll;
     border-top-left-radius: 30px;  /* Redondea la esquina superior izquierda */
     border-top-right-radius: 30px; /* Redondea la esquina superior derecha */
@@ -195,7 +200,7 @@ body {
 .create-todo-form input, .edit-todo-form input,
 .create-todo-form select, .edit-todo-form select {
     border: 0;
-    width: 100%;
+    width: 10%;
     padding: 3px 0;
     font-size: 16px;
     background-color: transparent;
