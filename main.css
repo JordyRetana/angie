@@ -32,7 +32,6 @@
 
 html {
     font-size: 62.5%;
-    zoom:80%
 
 }
 
@@ -54,7 +53,7 @@ body {
     grid-template-columns: 225px 1fr;
     border-radius: 16px;
     overflow: hidden;
-    height: auto;
+    height: 100%;
 }
 
 /* Utilities */
@@ -177,8 +176,6 @@ body {
 /* Main */
 .main {
     background-color: var(--pri);
-    height: 1100px;
-
     overflow-y: scroll;
     border-top-left-radius: 30px;  /* Redondea la esquina superior izquierda */
     border-top-right-radius: 30px; /* Redondea la esquina superior derecha */
@@ -358,7 +355,7 @@ body {
 #colorOptions {
     display: none;
     position: absolute;
-    top: 830px;
+    top: 660px;
     left: 0;
     background-color: #ffffff;
     border: 0.1px solid #000000;
